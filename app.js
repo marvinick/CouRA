@@ -1,6 +1,7 @@
- var courseRoster = angular.module('courseRoster', ['ui.router']);
+var courseRoster = angular.module('courseRoster', ['ui.router']);
 
- courseRoster.config(function($stateProvider, $urlRouterProvider) {
+courseRoster.config(function($stateProvider, $urlRouterProvider) {
+
   $stateProvider.state('home', {
     url: "",
     views: {
@@ -22,7 +23,7 @@
       'body': {
         templateUrl: "partials/courses.html",
         controller: 'CoursesCtrl'
-      },
+      }
     }
   });
 
@@ -38,4 +39,18 @@
       }
     }
   });
- });
+
+  $stateProvider.state('course', {
+    url: "/course",
+    views: {
+      'header': {
+        templateUrl: 'partials/header.html',
+      },
+      'body': {
+        templateUrl: "partials/course.detail.html",
+        controller: 'CoursesCtrl'
+      }
+    }
+  });
+
+});
