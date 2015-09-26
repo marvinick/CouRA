@@ -17,7 +17,7 @@
     url: "/courses",
     views: {
       'header': {
-        templateUrl: 'partials/header',
+        templateUrl: 'partials/header.html',
       },
       'body': {
         templateUrl: "partials/courses.html",
