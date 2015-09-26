@@ -20,3 +20,13 @@ courseRoster.directive("sampleCourse", function() {
     template: '<div>{{courseName}}</div>'
   }
 })
+
+courseRoster.directive("alertUser", function() {
+  return {
+    scope: {
+      dial: "&"
+    },
+    template: '<input type="text" ng-model="value">' +
+              '<div class="button" ng-click="dial({message:value})">Alert!</div>'
+  }
+})
